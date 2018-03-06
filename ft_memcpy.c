@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 18:32:23 by jadawson          #+#    #+#             */
-/*   Updated: 2018/02/26 16:16:53 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/05 22:01:37 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		final++;
 		collect++;
 	}
-	return (final);
+	return (dst);
 }

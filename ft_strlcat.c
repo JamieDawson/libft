@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 19:23:06 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/04 00:03:14 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/05 22:55:56 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t num)
 {
-	int	i;
-	int	j;
-	int	k;
-	int	total;
+	size_t	i;
+	size_t	j;
+	size_t	l;
 
 	i = 0;
-	while (dest[i] != '\0')
+	while (i < num && dest[i] != '\0')
 		i++;
+	l = i;
+	if (i == num)
+		return (num + ft_strlen(src));
 	j = 0;
-	k = 0;
-	while (src[j] != '\0' && num > k)
+	while (src[j] != '\0' && i < num - 1)
 	{
-		dest[i + j] = src[j];
+		dest[i] = src[j];
+		i++;
 		j++;
-		k++;
 	}
-	dest[i + j] = '\0';
-	total = i + j;
-	return (total);
+	dest[i] = '\0';
+	return (l + ft_strlen(src));
 }

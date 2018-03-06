@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 19:20:11 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/04 00:27:50 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/05 00:57:24 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char *ft_strncat(char *dest, const char *src, size_t num)
 		src++;
 		i++;
 	}
+	*dest = '\0';
 	return (temp);
 }

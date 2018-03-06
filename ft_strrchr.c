@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 19:43:21 by jadawson          #+#    #+#             */
-/*   Updated: 2018/02/24 20:37:11 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/05 23:00:06 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,15 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *str;
-	char let;
-	unsigned i;
+	size_t i;
 
-	str = (char*)s;
-	let = (char)c;
 	i = 0;
-	while(s[i])
-		i++;
-	while(i-- != 0)
+	while (s[i++])
+		;
+	while (i--)
 	{
-		if(*str == c)
-			return(str);
-		str++;
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
 	}
-	return(str);
+	return (NULL);
 }

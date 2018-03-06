@@ -14,16 +14,14 @@
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
-    unsigned char *replace;
     unsigned char *find;
-    
-    replace = (unsigned char*)s;
-    find = (unsigned char*)c;
+
+    find = (unsigned char*)s;
     while (n > 0)
     {
-        if (*replace == find)
-            return (replace);
-        replace++;
+        if (*find == (unsigned char)c)
+            return (find);
+        find++;
         n--;
     }
     return (NULL);

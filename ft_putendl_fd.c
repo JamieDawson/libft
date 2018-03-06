@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/25 21:52:59 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/06 00:02:14 by jadawson         ###   ########.fr       */
+/*   Created: 2018/03/04 20:42:04 by jadawson          #+#    #+#             */
+/*   Updated: 2018/03/05 22:49:02 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putendl_fd(char const *s, int fd)
 {
-     while (*s1 && *s2 && *s1 == *s2 && n)
-      {
-          s1++;
-          s2++;
-		  n--;
-      }
-     return ((unsigned char)*s1 - (unsigned char)*s2);
+	if (s == NULL)
+		return ;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

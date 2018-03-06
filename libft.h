@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 18:28:21 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/04 01:52:54 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/06 00:21:43 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *ptr, int value, size_t num);
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
-void	ft_putendl(char const *s);
+void	ft_putendl(char *s);
 void	ft_putnbr(int nb);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr(char const *s);
@@ -60,7 +60,7 @@ void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dest, const char *src, size_t num);
-int		ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strncat(char *dest, const char *src, size_t num);
@@ -76,4 +76,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);
 int		ft_tolower(int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+void	ft_putendl_ft(char const *s, int fd);
+int		ft_toupper(int c);
+char	*ft_itoa(int i);
+
 #endif

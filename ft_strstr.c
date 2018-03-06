@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 19:26:36 by jadawson          #+#    #+#             */
-/*   Updated: 2018/02/25 19:45:29 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/06 00:21:00 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,17 @@
 
 char *ft_strstr(const char *str, const char *to_find)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 
 	i = -1;
-	j = -1;
+	j = ft_strlen(to_find);
+	if (!j)
+		return ((char *)str);
 	while (str[++i])
 	{
-		while (str[i + j] == to_find[j])
-		{
-			if (to_find[j + 1] == '\0')
-				return ((char*)str + i);
-			++j;
-		}
+		if (ft_strncmp(&str[i], to_find, j) == 0)
+			return ((char *)&str[i]);
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 13:32:45 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/03 17:04:46 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/07 20:47:40 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_striter(char *s, void (*f)(char *))
 {
 	if (s == NULL || f == NULL)
 		return ;
-	if(s && f)
+	if (s && f)
 	{
-		while(*s)
+		while (*s)
 			f(s++);
 	}
 }

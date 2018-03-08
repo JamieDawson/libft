@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 13:36:47 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/06 23:37:39 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/07 20:07:32 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 char	*ft_strmap(char const *s, char (*f)(char))
 {
 	unsigned i;
-	char    *string;
-	char    *ptr;
+	char	*string;
+	char	*ptr;
     
 	string = (char*)s;
 	i = ft_strlen((char*)s);
 	ptr = (char*)malloc(sizeof(char) * i);
 	i = 0;
- 	if (ptr == NULL)
+	if (ptr == NULL)
 		return (NULL);
-	while(string[i])
+	while (string[i])
 	{
 		ptr[i] = f(string[i]);
 		i++;

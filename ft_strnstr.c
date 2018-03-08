@@ -6,25 +6,32 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 19:40:57 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/06 00:28:44 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/07 17:19:52 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t i;
-	size_t j;
+	unsigned long	i;
+	int				x;
 
-	i = -1;
-	j = ft_strlen(s2);
-	if (!j)
-		return ((char *)s1);
-	while (s1[++i] && i + j <= n)
+	x = 0;
+	i = 0;
+	if (!*little)
+		return ((char *)big);
+	while (big[i])
 	{
-		if (ft_strncmp(&s1[i], s2, j) == 0)
-			return ((char *)&s1[i]);
+		x = 0;
+		while (big[i] == little[x] && big[i] && i < len)
+		{
+			i++;
+			x++;
+		}
+		if (!little[x])
+			return ((char *)&big[i - x]);
+		i = (i - x) + 1;
 	}
 	return (NULL);
 }

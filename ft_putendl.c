@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 13:40:44 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/04 00:23:26 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/06 23:55:54 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_putendl(char *s)
 {
-	while (*s != '\0')
-		ft_putstr(s);
-	ft_putchar('\n');
+	if (!s)
+		return ;
+	ft_putstr(s);
+	write(1, "\n", 1);
 }

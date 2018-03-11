@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 15:17:02 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/07 20:31:40 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/10 19:37:07 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,8 @@ char	*ft_strtrim(char const *s)
 		i--;
 	tot = i - j;
 	if (tot < 0)
-	tot = 0;
-	ptr = (char*)malloc(sizeof(char) * tot + 1);
-	if (ptr == NULL)
+		tot = 0;
+	if ((ptr = (char*)malloc(sizeof(char) * tot + 1)) == NULL)
 		return (NULL);
 	ft_strncpy(ptr, &s[j], tot);
 	ptr[tot] = '\0';

@@ -6,13 +6,13 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/23 16:44:06 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/06 21:32:09 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/10 18:20:04 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int i;
 

@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 21:11:08 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/09 14:39:57 by jadawson         ###   ########.fr       */
+/*   Created: 2018/03/10 20:44:55 by jadawson          #+#    #+#             */
+/*   Updated: 2018/03/10 20:49:06 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(const char *s1, const char *s2, size_t n)
+int		ft_is_prime(int nb)
 {
-	if (!s1 || !s2)
+	int i;
+
+	i = 3;
+	if (nb <= 1)
 		return (0);
-	else if (!(ft_strncmp(s1, s2, n)))
+	if (nb == 2 || nb == 3)
 		return (1);
-	return (0);
+	if (nb % 2 == 0 || nb % 3 == 0)
+		return (0);
+	while ((i * i) <= nb)
+	{
+		if ((nb % i) == 0)
+			return (0);
+		i += 2;
+	}
+	return (1);
 }

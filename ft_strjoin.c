@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 14:53:26 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/03 17:06:46 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/10 17:50:47 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	int		tot;
 	char	*tmp;
 
+	if (!s1 || !s2)
+		return (NULL);
 	tot = (ft_strlen((char *)s1) + ft_strlen((char *)s2));
 	tmp = (char *)malloc(sizeof(*tmp) * (tot) + 1);
 	i = 0;

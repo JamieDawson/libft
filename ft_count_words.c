@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_count_words.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 21:11:08 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/09 14:39:57 by jadawson         ###   ########.fr       */
+/*   Created: 2018/03/09 13:51:19 by jadawson          #+#    #+#             */
+/*   Updated: 2018/03/09 13:52:16 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(const char *s1, const char *s2, size_t n)
+int		ft_count_words(char *str, char c)
 {
-	if (!s1 || !s2)
-		return (0);
-	else if (!(ft_strncmp(s1, s2, n)))
-		return (1);
-	return (0);
+	int		i;
+	int		words;
+
+	i = 0;
+	words = 0;
+	while (str[i] != '\0')
+	{
+		while (!(str[i] == c))
+			if (str[i] != '\0')
+				i++;
+			else
+				break ;
+		while (str[i] == c)
+			i++;
+		words++;
+	}
+	return (words);
 }

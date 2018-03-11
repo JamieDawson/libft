@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 14:49:18 by jadawson          #+#    #+#             */
-/*   Updated: 2018/02/24 17:15:57 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/10 18:19:44 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	long long nnb;
+
 	nnb = n;
 	if (nnb < 0)
 	{

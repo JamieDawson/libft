@@ -6,7 +6,7 @@
 #    By: jadawson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/03 23:56:36 by jadawson          #+#    #+#              #
-#    Updated: 2018/03/06 00:33:59 by jadawson         ###   ########.fr        #
+#    Updated: 2018/03/10 21:00:01 by jadawson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,9 @@ SOURCES = ft_putchar_fd.c ft_strcmp.c ft_strlen.c ft_strrchr.c ft_atoi.c \
       	  ft_memmove.c    ft_strcat.c     ft_striteri.c   ft_strnequ.c    ft_toupper.c \
 	  ft_isprint.c    ft_memset.c     ft_strchr.c     ft_strjoin.c    ft_strnew.c \
 	  ft_itoa.c       ft_putchar.c    ft_strclr.c     ft_strlcat.c    ft_strnstr.c \
-	  ft_memalloc.c
+	  ft_memalloc.c	ft_putendl_fd.c ft_count_words.c ft_numlen.c	ft_lstnew.c \
+	  ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_swap.c \
+	 ft_strrev.c  ft_is_prime.c 
 
 OBJECTS = $(SOURCES:%.c=%.o)
 

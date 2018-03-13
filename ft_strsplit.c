@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/02 22:23:53 by jadawson          #+#    #+#             */
-/*   Updated: 2018/03/10 19:40:57 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/03/12 15:08:11 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char			**ft_strsplit(char *str, char c)
 	dest = (char**)malloc(sizeof(char*) * (ft_count_words(str, c) + 1));
 	if (!dest)
 		return (NULL);
-	while (str[0] == c)
+	while (*str == c)
 		str++;
 	while (str[i] != '\0')
 	{
